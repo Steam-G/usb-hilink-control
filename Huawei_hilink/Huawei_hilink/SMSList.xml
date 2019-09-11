@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <Count>10</Count>
+  <Messages>
+    <Message>
+      <Smstat>0</Smstat>
+      <Index>40056</Index>
+      <Phone>111</Phone>
+      <Content>Ваш номер телефона  79876097005</Content>
+      <Date>2019-05-21 14:58:27</Date>
+      <Sca>
+      </Sca>
+      <SaveType>4</SaveType>
+      <Priority>0</Priority>
+      <SmsType>1</SmsType>
+    </Message>
+    <Message>
+      <Smstat>0</Smstat>
+      <Index>40055</Index>
+      <Phone>217</Phone>
+      <Content>Узнайте остаток трафика в удобном приложении «Мой МТС» (скачать: mts-service.mts.ru) или на сайте i.mts.ru</Content>
+      <Date>2019-05-21 12:57:23</Date>
+      <Sca>
+      </Sca>
+      <SaveType>2</SaveType>
+      <Priority>0</Priority>
+      <SmsType>2</SmsType>
+    </Message>
+    <Message>
+      <Smstat>0</Smstat>
+      <Index>40054</Index>
+      <Phone>+79174829844</Phone>
+      <Content>Очередной тест</Content>
+      <Date>2019-05-20 17:42:48</Date>
+      <Sca>
+      </Sca>
+      <SaveType>4</SaveType>
+      <Priority>0</Priority>
+      <SmsType>1</SmsType>
+    </Message>
+    <Message>
+      <Smstat>0</Smstat>
+      <Index>40053</Index>
+      <Phone>+79174829844</Phone>
+      <Content>Проверка проверка проверки ос по ранчо хороших шведов клан газ хороша </Content>
+      <Date>2019-05-17 17:06:18</Date>
+      <Sca>
+      </Sca>
+      <SaveType>4</SaveType>
+      <Priority>0</Priority>
+      <SmsType>1</SmsType>
+    </Message>
+    <Message>
+      <Smstat>0</Smstat>
+      <Index>40052</Index>
+      <Phone>+79174829844</Phone>
+      <Content>Новое тестовое сообщение 1234567890 %%%&amp;₽@#.... </Content>
+      <Date>2019-05-17 14:58:07</Date>
+      <Sca>
+      </Sca>
+      <SaveType>4</SaveType>
+      <Priority>0</Priority>
+      <SmsType>1</SmsType>
+    </Message>
+    <Message>
+      <Smstat>0</Smstat>
+      <Index>40051</Index>
+      <Phone>MCHS</Phone>
+      <Content>МЧС: по прогнозу БашУГМС 16-17.05 по Республике Башкортостан ожидаются порывы ветра 17-22м/с. Будьте внимательны и осторожны! Тел. 112</Content>
+      <Date>2019-05-16 18:47:44</Date>
+      <Sca>
+      </Sca>
+      <SaveType>4</SaveType>
+      <Priority>0</Priority>
+      <SmsType>2</SmsType>
+    </Message>
+    <Message>
+      <Smstat>1</Smstat>
+      <Index>40049</Index>
+      <Phone>MCHS</Phone>
+      <Content>МЧС: по прогнозу БашУГМС 15.05. по Республике Башкортостан ожидается усиление ветра до 25 м/с, град, ливни. Будьте внимательны! Тел.112.</Content>
+      <Date>2019-05-15 16:30:29</Date>
+      <Sca>
+      </Sca>
+      <SaveType>4</SaveType>
+      <Priority>0</Priority>
+      <SmsType>2</SmsType>
+    </Message>
+    <Message>
+      <Smstat>1</Smstat>
+      <Index>40050</Index>
+      <Phone>MTC</Phone>
+      <Content>Пора пополнить счет! Баланс Вашего счета составляет 1,00 руб. Легкие способы пополнить счет на сайте oplata.mts.ru</Content>
+      <Date>2019-05-15 01:03:38</Date>
+      <Sca>
+      </Sca>
+      <SaveType>4</SaveType>
+      <Priority>0</Priority>
+      <SmsType>2</SmsType>
+    </Message>
+    <Message>
+      <Smstat>1</Smstat>
+      <Index>40048</Index>
+      <Phone>MCHS</Phone>
+      <Content>МЧС:по прогнозу БашУГМС 15.05 по Республике Башкортостан ожидаются грозы, град, усиление ветра до 20 м/с. Будьте внимательны! Тел.112.</Content>
+      <Date>2019-05-14 18:51:13</Date>
+      <Sca>
+      </Sca>
+      <SaveType>4</SaveType>
+      <Priority>0</Priority>
+      <SmsType>2</SmsType>
+    </Message>
+    <Message>
+      <Smstat>1</Smstat>
+      <Index>40047</Index>
+      <Phone>+79174829844</Phone>
+      <Content>Тест второй</Content>
+      <Date>2019-05-14 18:25:11</Date>
+      <Sca>
+      </Sca>
+      <SaveType>4</SaveType>
+      <Priority>0</Priority>
+      <SmsType>1</SmsType>
+    </Message>
+  </Messages>
+</response>
