@@ -17,9 +17,15 @@ namespace USB_MTS_Control
         public Form1()
         {
             InitializeComponent();
+
             
+            Huawei.APIinit();
+
+            InfoSMSBlock(smsCountBox1);
             ListSMSBlock();
-            //string smscount = Huawei.SMScount();
+
+            string smscount = Huawei.SMScount("Inbox");
+            int test = Huawei.Notifications("sms");
         }
 
         private void ListSMSBlock()
@@ -41,8 +47,29 @@ namespace USB_MTS_Control
                 flowLayoutPanel1.Controls.Add(messageBox);
 
             }
-            
+        }
 
+        private void InfoSMSBlock(SmsCountBox smsCountBox)
+        {
+            //SmsCountBox smsCountBox = new SmsCountBox();
+            smsCountBox.LocalUnread = Huawei.SMScount("Unread");
+            smsCountBox.LocalInbox = Huawei.SMScount("Inbox");
+            smsCountBox.LocalOutbox = Huawei.SMScount("Outbox");
+
+            smsCountBox.LocalDraft = Huawei.SMScount("Draft");
+            smsCountBox.LocalDeleted = Huawei.SMScount("Deleted");
+            smsCountBox.SimUnread = Huawei.SMScount("SimUnread");
+            smsCountBox.SimInbox = Huawei.SMScount("SimInbox");
+            smsCountBox.SimOutbox = Huawei.SMScount("SimOutbox");
+            smsCountBox.SimDraft = Huawei.SMScount("SimDraft");
+            smsCountBox.LocalMax = Huawei.SMScount("LocalMax");
+            smsCountBox.SimMax = Huawei.SMScount("SimMax");
+            smsCountBox.SimUsed = Huawei.SMScount("SimUsed");
+            smsCountBox.NewMsg = Huawei.SMScount("NewMsg");
+
+            //flowLayoutPanel1.Controls.Add(smsCountBox);
+            //smsCountBox1 = smsCountBox;
+            //smsCountBox1.Update();
         }
     }
 }
