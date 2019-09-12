@@ -94,6 +94,92 @@ namespace HuaweiAPI
             }
         }
 
+        /// <summary>
+        /// Запрашивает информацию о количестве хранящихся в памяти устройства СМС
+        /// </summary>
+        /// <param name="name">Имя тега, информацию которого надо получить(Unread, Inbox, Outbox, Draft, Deleted, SimUnread, SimInbox, SimOutbox, SimDraft, LocalMax, SimMax, SimUsed, NewMsg)</param>
+        /// <returns></returns>
+        public static string SMScount(string name)
+        {
+            string response = CWB.DownloadString("http://192.168.8.1/api/sms/sms-count");
+            XmlDocument xDoc = new XmlDocument();
+            xDoc.LoadXml(response);
+
+            XmlNode xNode = xDoc.DocumentElement.SelectSingleNode("/response/LocalInbox");
+
+            switch (name)
+            {
+                case "Unread":
+                    {
+                        xNode = xDoc.DocumentElement.SelectSingleNode("/response/LocalUnread");
+                        break;
+                    }
+                case "Inbox":
+                    {
+                        xNode = xDoc.DocumentElement.SelectSingleNode("/response/LocalInbox");
+                        break;
+                    }
+                case "Outbox":
+                    {
+                        xNode = xDoc.DocumentElement.SelectSingleNode("/response/LocalOutbox");
+                        break;
+                    }
+                case "Draft":
+                    {
+                        xNode = xDoc.DocumentElement.SelectSingleNode("/response/LocalDraft");
+                        break;
+                    }
+                case "Deleted":
+                    {
+                        xNode = xDoc.DocumentElement.SelectSingleNode("/response/LocalDeleted");
+                        break;
+                    }
+                case "SimUnread":
+                    {
+                        xNode = xDoc.DocumentElement.SelectSingleNode("/response/SimUnread");
+                        break;
+                    }
+                case "SimInbox":
+                    {
+                        xNode = xDoc.DocumentElement.SelectSingleNode("/response/SimInbox");
+                        break;
+                    }
+                case "SimOutbox":
+                    {
+                        xNode = xDoc.DocumentElement.SelectSingleNode("/response/SimOutbox");
+                        break;
+                    }
+                case "SimDraft":
+                    {
+                        xNode = xDoc.DocumentElement.SelectSingleNode("/response/SimDraft");
+                        break;
+                    }
+                case "LocalMax":
+                    {
+                        xNode = xDoc.DocumentElement.SelectSingleNode("/response/LocalMax");
+                        break;
+                    }
+                case "SimMax":
+                    {
+                        xNode = xDoc.DocumentElement.SelectSingleNode("/response/SimMax");
+                        break;
+                    }
+                case "SimUsed":
+                    {
+                        xNode = xDoc.DocumentElement.SelectSingleNode("/response/SimUsed");
+                        break;
+                    }
+                case "NewMsg":
+                    {
+                        xNode = xDoc.DocumentElement.SelectSingleNode("/response/NewMsg");
+                        break;
+                    }
+            }
+
+            string attr = xNode.InnerText;
+            return attr;
+        }
+
 
         public static int Notifications(string name)
         {
@@ -433,18 +519,7 @@ namespace HuaweiAPI
             return utfLine;
         }
 
-        //ЧТО_ТО НЕ РАБОТАЕТ!!!!!!
-        public static string SMScount()
-        {
-            string response = CWB.DownloadString("http://192.168.8.1/api/sms/sms-count");
-            XmlDocument xDoc = new XmlDocument();
-            xDoc.LoadXml(response);
-
-            XmlNode xNode = xDoc.DocumentElement.SelectSingleNode("/response/LocalUnread");
-            return xNode.InnerText;
-        }
-
-
+        
         /// <summary>
         /// Функция отправки СМС, требуется только номер адресата в формате +7xxxxxxxxxx и само сообщение
         /// </summary>
