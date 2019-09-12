@@ -52,7 +52,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.8062F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.1938F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(352, 129);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(300, 100);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // splitContainer1
@@ -68,8 +68,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Size = new System.Drawing.Size(346, 26);
-            this.splitContainer1.SplitterDistance = 115;
+            this.splitContainer1.Size = new System.Drawing.Size(294, 18);
+            this.splitContainer1.SplitterDistance = 97;
             this.splitContainer1.TabIndex = 0;
             // 
             // label1
@@ -93,10 +93,10 @@
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(3, 35);
+            this.textBox1.Location = new System.Drawing.Point(3, 27);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 91);
+            this.textBox1.Size = new System.Drawing.Size(294, 70);
             this.textBox1.TabIndex = 1;
             // 
             // MessageBox
@@ -105,7 +105,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MessageBox";
-            this.Size = new System.Drawing.Size(352, 129);
+            this.Size = new System.Drawing.Size(300, 100);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
