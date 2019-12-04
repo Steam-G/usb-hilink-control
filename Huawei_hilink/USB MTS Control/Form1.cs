@@ -22,15 +22,34 @@ namespace USB_MTS_Control
             Huawei.APIinit();
 
             InfoSMSBlock(smsCountBox1);
-            ListSMSBlock();
+            //ListSMSBlock();
 
             string smscount = Huawei.SMScount("Inbox");
             int test = Huawei.Notifications("sms");
+
+            // Создаем  делегает, который ссылается на нужный метод
+            SomeDelegat sd = new SomeDelegat(ListSMSBlock);
+            //sd.Invoke();
+            // Вызываем метод с делегатом в качестве аргумента
+            tiktak(sd);
+        }
+
+        delegate void SomeDelegat();
+
+        private void tiktak(SomeDelegat sd)
+        {
+            var timer = new System.Threading.Timer(
+                e => sd.Invoke(),
+                null,
+                TimeSpan.Zero,
+                TimeSpan.FromSeconds(10));
         }
 
         private void ListSMSBlock()
         {
             XmlDocument document = Huawei.SmsList(1, 50/*Huawei.Notifications("sms")*/, 1, 0, 0, 1);
+
+            this.flowLayoutPanel1.BeginInvoke((MethodInvoker)(() => this.flowLayoutPanel1.Controls.Clear()));
             foreach (XmlNode node in document.DocumentElement.SelectNodes("/response/Messages/Message"))
             {
                 string phone = node["Phone"].InnerText;
@@ -44,7 +63,10 @@ namespace USB_MTS_Control
                 messageBox.DateTimeMessage = date;
                 messageBox.PhoneNumber = phone;
                 messageBox.TextMessage = content;
-                flowLayoutPanel1.Controls.Add(messageBox);
+
+                
+                this.flowLayoutPanel1.BeginInvoke((MethodInvoker)(() => this.flowLayoutPanel1.Controls.Add(messageBox)));
+                //flowLayoutPanel1.Controls.Add(messageBox);
 
             }
         }
@@ -70,6 +92,16 @@ namespace USB_MTS_Control
             //flowLayoutPanel1.Controls.Add(smsCountBox);
             //smsCountBox1 = smsCountBox;
             //smsCountBox1.Update();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ListSMSBlock();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ListSMSBlock();
         }
     }
 }

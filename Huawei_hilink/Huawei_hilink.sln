@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huawei_hilink", "Huawei_hil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USB MTS Control", "USB MTS Control\USB MTS Control.csproj", "{4CA2D431-39DE-4C05-9B72-11C186F6F777}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSHSNUsmsParser", "ConsoleSHSNUsmsParser\ConsoleSHSNUsmsParser.csproj", "{1D1B8DDD-0897-450F-AE5E-6C60E76BC310}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSreader", "SMSreader\SMSreader.csproj", "{263A4302-E304-42FF-B9A0-94006084040D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{4CA2D431-39DE-4C05-9B72-11C186F6F777}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CA2D431-39DE-4C05-9B72-11C186F6F777}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CA2D431-39DE-4C05-9B72-11C186F6F777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D1B8DDD-0897-450F-AE5E-6C60E76BC310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D1B8DDD-0897-450F-AE5E-6C60E76BC310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D1B8DDD-0897-450F-AE5E-6C60E76BC310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D1B8DDD-0897-450F-AE5E-6C60E76BC310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263A4302-E304-42FF-B9A0-94006084040D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263A4302-E304-42FF-B9A0-94006084040D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263A4302-E304-42FF-B9A0-94006084040D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263A4302-E304-42FF-B9A0-94006084040D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
